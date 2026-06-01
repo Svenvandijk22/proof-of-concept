@@ -58,8 +58,17 @@
       </div>
     </div>
 
-    <form class="search-form" action="/search" method="get">
-      <label for="search" class="visually-hidden">Zoeken</label>
+    <div class="mobile-search">
+      <form class="search-form" action="#" method="get">
+        <button type="submit" aria-label="Zoeken">
+          <img src="icons/search.svg" alt="" />
+        </button>
+
+        <input type="search" name="q" placeholder="Zoeken" />
+      </form>
+    </div>
+
+    <div class="menu-overlay"></div>
 
       <button type="submit" class="search-button" aria-label="Zoeken">
         <img src="icons/search.svg" alt="" />
