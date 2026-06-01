@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>decathlon</title>
+    <link rel="stylesheet" href="styles/style.css">
+  <script src="/client.js" defer></script>
+  
+  </head>
+<header class="site-header">
+  <div class="promo-bar">
+    <p>
+      Blijf altijd op de hoogte van de laatste kortingsacties en nieuwe collecties!
+      <a href="#">Meld je aan</a>
+    </p>
+  </div>
+
+  <nav class="main-nav" aria-label="Hoofdnavigatie">
+    <div class="nav-top">
+      <button class="nav-icon nav-menu" aria-label="Menu openen">
+        <img src="icons/menu.svg" alt="" />
+      </button>
+
+      <a href="/" class="nav-logo" aria-label="Decathlon home">
+        <img src="images/decathlon-logo.svg" alt="Decathlon" />
+      </a>
+
+      <div class="nav-actions">
+        <a href="/account" class="nav-icon" aria-label="Mijn account">
+          <img src="icons/user.svg" alt="" />
+        </a>
+
+        <a href="/winkelwagen" class="nav-icon cart-icon" aria-label="Winkelwagen">
+          <img src="icons/cart.svg" alt="" />
+          <span class="cart-count">2</span>
+        </a>
+      </div>
+    </div>
+
+    <form class="search-form" action="/search" method="get">
+      <label for="search" class="visually-hidden">Zoeken</label>
+
+      <button type="submit" class="search-button" aria-label="Zoeken">
+        <img src="icons/search.svg" alt="" />
+      </button>
+
+      <input
+        type="search"
+        id="search"
+        name="q"
+        placeholder="Zoeken"
+        autocomplete="off"
+      />
+    </form>
+
+    <ul class="nav-links">
+      <li><a href="#">Sporten</a></li>
+      <li><a href="#">Heren</a></li>
+      <li><a href="#">Dames</a></li>
+      <li><a href="#">Kinderen</a></li>
+      <li><a href="#">Sport accessoires</a></li>
+      <li><a href="#">Sale</a></li>
+      <li><a href="#">Services / Tweedehands</a></li>
+      <li><a href="#">WK voetbal fanshop</a></li>
+      <li><a href="#">Giftcard</a></li>
+    </ul>
+  </nav>
+</header>
