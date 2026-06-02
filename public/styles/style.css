@@ -173,3 +173,29 @@
         font-size: 2rem;
         cursor: pointer;
       }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 2rem 0 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      a {
+        color: #111;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+    }
+
+    .menu-toggle:checked ~ .menu-overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .menu-toggle:checked ~ .mobile-menu {
+      transform: translateX(0);
+    }
