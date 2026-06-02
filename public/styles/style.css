@@ -199,3 +199,66 @@
     .menu-toggle:checked ~ .mobile-menu {
       transform: translateX(0);
     }
+
+    @media (min-width: 900px) {
+      padding: 2rem 4.5rem 1.5rem;
+
+      .nav-top {
+        display: grid;
+        grid-template-columns: auto minmax(24rem, 54rem) auto;
+        gap: 3rem;
+      }
+
+      .menu-button,
+      .mobile-search,
+      .mobile-menu,
+      .menu-overlay {
+        display: none;
+      }
+
+      .nav-logo {
+        justify-self: start;
+
+        img {
+          width: 13.5rem;
+        }
+      }
+
+      .nav-top {
+        > .search-form {
+          display: flex;
+        }
+      }
+
+      .nav-actions {
+        display: flex;
+        gap: 1.4rem;
+
+        .nav-icon:nth-child(1),
+        .nav-icon:nth-child(2) {
+          display: flex;
+        }
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin: 1.75rem 0 0;
+        padding: 0;
+        list-style: none;
+
+        li:nth-child(6) {
+          margin-right: auto;
+        }
+
+        a {
+          color: #111;
+          font-size: 1rem;
+          font-weight: 500;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
