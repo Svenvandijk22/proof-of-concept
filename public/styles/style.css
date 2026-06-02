@@ -20,3 +20,18 @@
       text-decoration: underline;
     }
   }
+
+  .main-nav {
+    padding: 1.25rem;
+    background: #fff;
+
+    .menu-toggle {
+      display: none;
+    }
+
+    .nav-top {
+      display: grid;
+      grid-template-columns: 2rem 1fr auto;
+      align-items: center;
+      gap: 1rem;
+    }
