@@ -58,3 +58,9 @@
         display: block;
       }
     }
+
+    .nav-top {
+      > .search-form {
+        display: none;
+      }
+    }
