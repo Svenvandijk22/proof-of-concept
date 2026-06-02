@@ -105,3 +105,23 @@
       }
     }
 
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .nav-icon:nth-child(1),
+      .nav-icon:nth-child(2) {
+        display: none;
+      }
+    }
+
+    .nav-icon {
+      position: relative;
+      display: flex;
+
+      img {
+        width: 1.5rem;
+      }
+    }
+
