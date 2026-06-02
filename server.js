@@ -1,6 +1,3 @@
-
-
-
 import express from "express";
 
 // Importeer de Liquid package (ook als dependency via npm geïnstalleerd)
@@ -25,7 +22,20 @@ app.engine("liquid", engine.express());
 app.set("views", "./views");
 
 
-app.get("/test", async function (request, response) {
+app.get("/", async function (request, response) {
 
     response.render("index.liquid", { });
+});
+
+
+// Stel het poortnummer in waar Express op moet gaan luisteren
+// Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
+app.set("port", process.env.PORT || 8000);
+
+// Start Express op, gebruik daarbij het zojuist ingestelde poortnummer op
+app.listen(app.get("port"), function () {
+  // Toon een bericht in de console
+  console.log(
+    `Daarna kun je via http://localhost:${app.get("port")}/ jouw interactieve website bekijken.\n\nThe Web is for Everyone. Maak mooie dingen 🙂`,
+  );
 });
