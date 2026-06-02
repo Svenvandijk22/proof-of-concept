@@ -156,3 +156,20 @@
       transition: 0.25s;
     }
 
+    .mobile-menu {
+      position: fixed;
+      inset: 0 auto 0 0;
+      z-index: 11;
+      width: min(85vw, 22rem);
+      padding: 1.5rem;
+      background: #fff;
+      transform: translateX(-100%);
+      transition: 0.25s;
+
+      .close-button {
+        display: block;
+        margin-left: auto;
+        width: fit-content;
+        font-size: 2rem;
+        cursor: pointer;
+      }
