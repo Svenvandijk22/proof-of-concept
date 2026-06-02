@@ -35,3 +35,26 @@
       align-items: center;
       gap: 1rem;
     }
+
+    .menu-button {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      cursor: pointer;
+
+      span {
+        width: 1.6rem;
+        height: 0.12rem;
+        background: #111;
+        border-radius: 1rem;
+      }
+    }
+
+    .nav-logo {
+      justify-self: center;
+
+      img {
+        width: 9.5rem;
+        display: block;
+      }
+    }
