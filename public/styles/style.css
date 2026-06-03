@@ -286,3 +286,16 @@
       object-fit: contain;
     }
   }
+
+  .gallery-counter {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+
+    padding: 0.5rem 0.75rem;
+    border-radius: 999rem;
+
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
