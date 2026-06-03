@@ -36,7 +36,6 @@
       display: none;
     }
 
-    .nav-top {
  .nav-top {
       display: grid;
       grid-template-columns: 2rem 1fr auto;
