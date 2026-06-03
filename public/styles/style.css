@@ -60,7 +60,7 @@
     }
 
     .nav-top {
-      > .search-form {
+       .search-form {
         display: none;
       }
     }
