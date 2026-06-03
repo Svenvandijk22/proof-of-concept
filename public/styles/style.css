@@ -347,3 +347,23 @@
       outline: 2px solid #3643ba;
     }
   }
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+
+    .gallery-thumbnails {
+      order: 1;
+
+      flex-direction: column;
+      width: 5rem;
+
+      overflow: visible;
+    }
+
+    .gallery-main {
+      order: 2;
+      flex: 1;
+    }
+  }
+}
+
