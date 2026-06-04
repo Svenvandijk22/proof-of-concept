@@ -10,3 +10,7 @@ thumbnails.forEach((thumbnail) => {
   thumbnail.addEventListener("click", (event) => {
     // Stap 5: Voorkom dat de link de afbeelding opent
     event.preventDefault();
+
+    // Stap 6: Pak de img uit de aangeklikte thumbnail
+    const thumbnailImage = thumbnail.querySelector("img");
+
