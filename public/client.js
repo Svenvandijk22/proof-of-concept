@@ -20,3 +20,7 @@ thumbnails.forEach((thumbnail) => {
     // Stap 8: Neem ook de alt-tekst over voor accessibility
     mainImage.alt = thumbnailImage.alt;
 
+    // Stap 9: Haal eerst de active class weg bij alle thumbnails
+    thumbnails.forEach((item) => {
+      item.classList.remove("active");
+    });
