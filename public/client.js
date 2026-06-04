@@ -24,3 +24,8 @@ thumbnails.forEach((thumbnail) => {
     thumbnails.forEach((item) => {
       item.classList.remove("active");
     });
+
+    // Stap 10: Zet de active class op de aangeklikte thumbnail
+    thumbnail.classList.add("active");
+  });
+});
