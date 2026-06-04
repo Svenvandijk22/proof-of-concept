@@ -17,3 +17,6 @@ thumbnails.forEach((thumbnail) => {
     // Stap 7: Vervang de hoofdafbeelding met de thumbnail-afbeelding
     mainImage.src = thumbnailImage.src;
 
+    // Stap 8: Neem ook de alt-tekst over voor accessibility
+    mainImage.alt = thumbnailImage.alt;
+
