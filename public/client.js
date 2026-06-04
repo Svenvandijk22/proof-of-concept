@@ -8,3 +8,5 @@ const mainImage = document.querySelector(".gallery-main-image");
 thumbnails.forEach((thumbnail) => {
   // Stap 4: Luister naar een klik op elke thumbnail
   thumbnail.addEventListener("click", (event) => {
+    // Stap 5: Voorkom dat de link de afbeelding opent
+    event.preventDefault();
