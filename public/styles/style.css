@@ -289,6 +289,7 @@ body {
       border-radius: 1rem;
       border: #F5F5F5 solid 1px;
       object-fit: contain;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 
 
     }
@@ -332,7 +333,7 @@ body {
   width: 5rem;
   height: 5rem;
   padding: 0.25rem;
-
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
   border: 2px solid transparent;
   border-radius: 0.75rem;
 
@@ -378,6 +379,7 @@ body {
 
     &.active {
       border-color: #3643ba;
+      border: solid 2.3px;
     }
   }
   
