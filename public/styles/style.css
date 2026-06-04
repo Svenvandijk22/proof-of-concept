@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Inter", sans-serif;
+}
+
 
 .site-header {
   width: 100%;
@@ -36,7 +40,7 @@
       display: none;
     }
 
- .nav-top {
+    .nav-top {
       display: grid;
       grid-template-columns: 2rem 1fr auto;
       align-items: center;
@@ -67,7 +71,7 @@
     }
 
     .nav-top {
-       .search-form {
+      .search-form {
         display: none;
       }
     }
@@ -198,12 +202,12 @@
       }
     }
 
-    .menu-toggle:checked ~ .menu-overlay {
+    .menu-toggle:checked~.menu-overlay {
       opacity: 1;
       pointer-events: auto;
     }
 
-    .menu-toggle:checked ~ .mobile-menu {
+    .menu-toggle:checked~.mobile-menu {
       transform: translateX(0);
     }
 
@@ -232,7 +236,7 @@
       }
 
       .nav-top {
-        > .search-form {
+        >.search-form {
           display: flex;
         }
       }
@@ -280,24 +284,15 @@
 
     .gallery-main-image {
       width: 100%;
-      display: block;
-      border-radius: 0.75rem;
+      display: flex;
+      border-radius: 1rem;
+      border: #F5F5F5 solid 1px;
       object-fit: contain;
+     
+
     }
   }
 
-  .gallery-counter {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-
-    padding: 0.5rem 0.75rem;
-    border-radius: 999rem;
-
-    background: rgba(255, 255, 255, 0.9);
-    font-size: 0.875rem;
-    font-weight: 600;
-  }
 
   .gallery-zoom-button {
     position: absolute;
@@ -323,14 +318,14 @@
     gap: 0.75rem;
 
     padding: 0;
-    margin: 0;
+    margin-left: 10%;
 
     overflow-x: auto;
     list-style: none;
   }
 
   .gallery-thumbnail {
-    display: block;
+ 
 
     img {
       width: 4rem;
@@ -339,7 +334,7 @@
       display: block;
 
       border-radius: 0.5rem;
-      object-fit: cover;
+       object-fit: contain;
     }
 
     &.active img {
@@ -352,17 +347,31 @@
 
     .gallery-thumbnails {
       order: 1;
-
+      margin-left: 4.5%;
       flex-direction: column;
       width: 5rem;
 
       overflow: visible;
+
+      img {
+        width: 6rem;
+        height: 6rem;
+      }
+
+
     }
 
     .gallery-main {
       order: 2;
       flex: 1;
+         margin-left: 3%;
+        
+          .gallery-main-image{
+        width: 60%;
+     }
+
     }
+
+    
   }
 }
-
