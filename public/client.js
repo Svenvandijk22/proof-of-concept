@@ -14,3 +14,6 @@ thumbnails.forEach((thumbnail) => {
     // Stap 6: Pak de img uit de aangeklikte thumbnail
     const thumbnailImage = thumbnail.querySelector("img");
 
+    // Stap 7: Vervang de hoofdafbeelding met de thumbnail-afbeelding
+    mainImage.src = thumbnailImage.src;
+
