@@ -23,10 +23,18 @@ app.set("views", "./views");
 
 
 app.get("/", async function (request, response) {
+  const apiResponse = await fetch(
+    "https://fdnd-agency.directus.app/items/decathlon_products"
+  );
 
-    response.render("index.liquid", { });
+  const data = await apiResponse.json();
+  const product = data.data[0];
+
+  response.render("index.liquid", {
+    product: product,
+    images: product.images,
+  });
 });
-
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
