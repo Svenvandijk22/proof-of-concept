@@ -26,6 +26,7 @@ app.get("/", async function (request, response) {
   const apiResponse = await fetch(
     "https://fdnd-agency.directus.app/items/decathlon_products?fields=*.*"
   );
+ // Met fields=*.* worden ook gekoppelde relaties opgehaald, dan kan ik later ook de beschrijving van het product ophalen
 
 
   const data = await apiResponse.json();
