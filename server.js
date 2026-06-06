@@ -27,12 +27,21 @@ app.get("/", async function (request, response) {
     "https://fdnd-agency.directus.app/items/decathlon_products?fields=*.*"
   );
 
+
   const data = await apiResponse.json();
+
+  // Pak het eerste product uit de data-array.
   const product = data.data[0];
+
+// Gebruik map() om door alle afbeeldingen te lopen
+// en van elke Directus file ID een bruikbare afbeelding-URL te maken.
+  const images = product.images.map((image) => {
+    return `https://fdnd-agency.directus.app/assets/${image.directus_files_id}`;
+  });
 
   response.render("index.liquid", {
     product: product,
-    images: product.images,
+    images: images,
   });
 });
 
