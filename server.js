@@ -24,7 +24,7 @@ app.set("views", "./views");
 
 app.get("/", async function (request, response) {
   const apiResponse = await fetch(
-    "https://fdnd-agency.directus.app/items/decathlon_products"
+    "https://fdnd-agency.directus.app/items/decathlon_products?fields=*.*"
   );
 
   const data = await apiResponse.json();
