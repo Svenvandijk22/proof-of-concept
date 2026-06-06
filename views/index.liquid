@@ -2,84 +2,32 @@
 
 
 <section class="product-gallery">
-
   <div class="gallery-main">
-
-
-
-    <button
-      class="gallery-zoom-button"
  
-    >
-      <img src="./assets/icons/zoom.svg" alt="">
-    </button>
 
     <img
       class="gallery-main-image"
-      src="assets/racefiets.jpg"
-    
+      src="{{ images.first }}"
+      alt="{{ product.title }}"
     >
-
   </div>
 
   <ul class="gallery-thumbnails">
-
-    <li>
-      <a
-        class="gallery-thumbnail active "
-        href="./assets/images/bike-1.webp"
-      >
-        <img
-         src="assets/racefiets.jpg" alt="racefiets"
-    
-        
+    {% for image in images %}
+      <li>
+        <a
+          class="gallery-thumbnail {% if forloop.first %}active{% endif %}"
+          href="{{ image }}"
         >
-      </a>
-    </li>
-
-    <li>
-      <a
-        class="gallery-thumbnail"
-        href="./assets/images/bike-2.webp"
-      >
-        <img
-          src="assets/logo.svg" alt="race fiets"
-    
-       
-        >
-      </a>
-    </li>
-
-    <li>
-      <a
-        class="gallery-thumbnail"
-        href="./assets/images/bike-3.webp"
-      >
-        <img
-           src="assets/racefiets.jpg" alt="race fiets"
-    
-        
-        >
-      </a>
-    </li>
-
-    <li>
-      <a
-        class="gallery-thumbnail"
-        href="./assets/images/bike-4.webp"
-      >
-        <img
-           src="assets/racefiets.jpg" alt="racefiets"
-    
-        
-        >
-      </a>
-    </li>
-
+          <img
+            src="{{ image }}"
+            alt="{{ product.title }}"
+          >
+        </a>
+      </li>
+    {% endfor %}
   </ul>
-
 </section>
-
 
 </body>
 
