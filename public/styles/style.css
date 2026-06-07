@@ -598,4 +598,20 @@ body {
     }
   }
 
+  .zoom-cart-button {
+    width: min(90vw, 22rem);
+    padding: 1rem 2rem;
+
+    border: 0;
+    border-radius: 0.5rem;
+
+    background: #3643ba;
+    color: #fff;
+
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    cursor: pointer;
+  }
+
 }
