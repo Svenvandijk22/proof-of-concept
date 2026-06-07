@@ -453,4 +453,17 @@ body {
   &.active {
     display: flex;
   }
+
+  .zoom-modal {
+    position: relative;
+
+    width: min(90vw, 80rem);
+    height: min(90vh, 60rem);
+
+    background: #fff;
+    border-radius: 1.5rem;
+
+    overflow: hidden;
+  }
+
 }
