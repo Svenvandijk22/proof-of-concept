@@ -614,4 +614,28 @@ body {
     cursor: pointer;
   }
 
+
+  @media (min-width: 900px) {
+  .zoom-modal {
+    width: min(90vw, 80rem);
+    height: min(88vh, 56rem);
+  }
+
+  .zoom-image {
+    max-width: 88%;
+    max-height: 82%;
+  }
+
+  .zoom-arrow-left {
+    left: 2rem;
+  }
+
+  .zoom-arrow-right {
+    right: 2rem;
+  }
+
+  .zoom-cart-button {
+    width: 26rem;
+  }
+}
 }
