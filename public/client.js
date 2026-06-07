@@ -29,3 +29,18 @@ thumbnails.forEach((thumbnail) => {
     thumbnail.classList.add("active");
   });
 });
+
+
+const galleryMainImage = document.querySelector(".gallery-main-image");
+const galleryThumbnails = document.querySelectorAll(".gallery-thumbnail");
+
+const zoomOverlay = document.querySelector(".zoom-overlay");
+const zoomImage = document.querySelector(".zoom-image");
+const zoomClose = document.querySelector(".zoom-close");
+
+const zoomPrev = document.querySelector(".zoom-arrow-left");
+const zoomNext = document.querySelector(".zoom-arrow-right");
+
+const zoomIn = document.querySelector(".zoom-in");
+const zoomOut = document.querySelector(".zoom-out");
+const zoomLevelText = document.querySelector(".zoom-level");
