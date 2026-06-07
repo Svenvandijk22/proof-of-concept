@@ -539,4 +539,13 @@ body {
 
     transform: translateY(-50%);
   }
+
+  .zoom-arrow-left {
+    left: 1rem;
+  }
+
+  .zoom-arrow-right {
+    right: 1rem;
+  }
+
 }
