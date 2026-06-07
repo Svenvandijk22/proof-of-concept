@@ -588,4 +588,14 @@ body {
 
       cursor: pointer;
     }
+
+    .zoom-level {
+      min-width: 4rem;
+      text-align: center;
+
+      font-size: 1.125rem;
+      font-weight: 700;
+    }
+  }
+
 }
