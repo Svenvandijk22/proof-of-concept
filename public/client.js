@@ -70,3 +70,18 @@ const image = thumbnail.querySelector("img");
     alt: image.alt,
   };
 });
+
+
+
+function updateZoomImage() {
+  // Toon de afbeelding van de actieve index.
+  zoomImage.src = galleryImages[currentImageIndex].src;
+  zoomImage.alt = galleryImages[currentImageIndex].alt;
+
+  // Hier verander ik de waarde van de variabele 
+  zoomLevel = 1;
+  zoomImage.style.transform = `scale(${zoomLevel})`;
+  // // Werk de zoom percentage tekst bij.
+  zoomLevelText.textContent = "100%";
+}
+
