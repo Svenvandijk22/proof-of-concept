@@ -44,3 +44,13 @@ const zoomNext = document.querySelector(".zoom-arrow-right");
 const zoomIn = document.querySelector(".zoom-in");
 const zoomOut = document.querySelector(".zoom-out");
 const zoomLevelText = document.querySelector(".zoom-level");
+
+
+// Houdt bij welke afbeelding momenteel actief is
+// 0 = eerste afbeelding, 1 = tweede afbeelding, enzovoort
+// gebruiken let zodat de waarde altijd kan veranderen
+let currentImageIndex = 0;
+
+// Houdt het huidige zoomniveau bij
+let zoomLevel = 1;
+
