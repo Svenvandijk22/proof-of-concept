@@ -85,3 +85,19 @@ function updateZoomImage() {
   zoomLevelText.textContent = "100%";
 }
 
+galleryMainImage.addEventListener("click", () => {
+  
+  const activeThumbnail = document.querySelector(".gallery-thumbnail.active");
+  // hier pak ik de actieve thumb nail
+
+  currentImageIndex = Array.from(galleryThumbnails).indexOf(activeThumbnail);
+// Waarom kunnen we galleryImages niet gebruiken? we zzoeken naar de active thumbnail
+// index of gebruiken we om te weten welke positie een waarde in een array staat nu wil ik de active
+  
+zoomOverlay.classList.add("active");
+
+// laat de zoom over lay verschijnen door de active state toete voegen
+
+// voert de zoom function uit die ik net heb aangemaakt
+  updateZoomImage();
+});
