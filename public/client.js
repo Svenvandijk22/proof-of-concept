@@ -54,3 +54,19 @@ let currentImageIndex = 0;
 // Houdt het huidige zoomniveau bij
 let zoomLevel = 1;
 
+
+// zet de NodeList gallery thumbnails om naar een echte array met array.from() Omdat .map() alleen op arrays werkt.
+// .map() loopt door elk item heen.
+const galleryImages = Array.from(galleryThumbnails).map((thumbnail) => {
+
+  // Zoek binnen deze specifieke thumbnail naar de afbeelding het is een hele link en ik heb alleen de src en alt nodig
+const image = thumbnail.querySelector("img");
+
+// return geeft een waarde terug
+// geeft een object terug met de src en alt van de afbeelding
+// Binnen de map callback maak ik met {} een object, Map verzamelt alle teruggegeven objecten en stopt ze in een nieuwe array 
+  return {
+    src: image.src,
+    alt: image.alt,
+  };
+});
