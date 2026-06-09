@@ -101,3 +101,9 @@ zoomOverlay.classList.add("active");
 // voert de zoom function uit die ik net heb aangemaakt
   updateZoomImage();
 });
+
+zoomClose.addEventListener("click", () => {
+  zoomOverlay.classList.remove("active");
+});
+
+// dit is om hem te sluiten hij haalt de active state weg 
