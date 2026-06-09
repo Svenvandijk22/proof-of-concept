@@ -107,3 +107,20 @@ zoomClose.addEventListener("click", () => {
 });
 
 // dit is om hem te sluiten hij haalt de active state weg 
+
+
+
+// voor de pijltjes
+zoomNext.addEventListener("click", () => {
+ currentImageIndex = currentImageIndex + 1;
+ // pakt de huidige afbeelding en doet plus 1 inde array en pakt bij de klik de volgende 
+
+  if (currentImageIndex >= galleryImages.length) {
+    currentImageIndex = 0;
+  }
+// Controleer of we voorbij de laatste afbeelding zijn gegaan.
+// Zo ja, begin weer bij de eerste afbeelding.
+  
+
+  updateZoomImage();
+});
