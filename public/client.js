@@ -172,3 +172,12 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     zoomOverlay.classList.remove("active");
   }
+
+  if (event.key === "ArrowRight") {
+    zoomNext.click();
+  }
+
+  if (event.key === "ArrowLeft") {
+    zoomPrev.click();
+  }
+});
