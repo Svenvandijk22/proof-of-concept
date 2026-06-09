@@ -124,3 +124,15 @@ zoomNext.addEventListener("click", () => {
 
   updateZoomImage();
 });
+
+zoomPrev.addEventListener("click", () => {
+currentImageIndex = currentImageIndex - 1;
+// pakt de huidige afbeelding en gaat er 1 terug
+
+  if (currentImageIndex < 0) {
+    currentImageIndex = galleryImages.length - 1;
+  }
+  // Spring naar de laatste afbeelding wanneer we vóór de eerste afbeelding komen.
+
+  updateZoomImage();
+});
