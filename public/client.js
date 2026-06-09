@@ -164,3 +164,7 @@ zoomOut.addEventListener("click", () => {
   zoomLevelText.textContent = `${Math.round(zoomLevel * 100)}%`;
 });
 
+// testen :)
+
+document.addEventListener("keydown", (event) => {
+  if (!zoomOverlay.classList.contains("active")) return;
