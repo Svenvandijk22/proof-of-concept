@@ -44,6 +44,7 @@ const zoomNext = document.querySelector(".zoom-arrow-right");
 const zoomIn = document.querySelector(".zoom-in");
 const zoomOut = document.querySelector(".zoom-out");
 const zoomLevelText = document.querySelector(".zoom-level");
+const galleryZoomButton = document.querySelector(".gallery-zoom-button");
 
 
 // Houdt bij welke afbeelding momenteel actief is
