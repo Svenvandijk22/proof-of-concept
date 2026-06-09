@@ -168,3 +168,7 @@ zoomOut.addEventListener("click", () => {
 
 document.addEventListener("keydown", (event) => {
   if (!zoomOverlay.classList.contains("active")) return;
+
+  if (event.key === "Escape") {
+    zoomOverlay.classList.remove("active");
+  }
