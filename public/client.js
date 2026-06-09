@@ -136,3 +136,19 @@ currentImageIndex = currentImageIndex - 1;
 
   updateZoomImage();
 });
+
+zoomIn.addEventListener("click", () => {
+zoomLevel = zoomLevel + 0.25;
+// hier pas ik de zoom level en verhoog het met 0.25
+
+  if (zoomLevel > 1.75) {
+    zoomLevel = 1.75;
+  }
+  // weer een controle als het over 1.75 springt dat hij terug gaat
+  
+
+ // Pas de CSS transform aan zodat de afbeelding groter of kleiner wordt.
+  zoomImage.style.transform = `scale(${zoomLevel})`;
+  // Zet het zoomLevel om naar een percentage en toon dit in de overlay.
+  zoomLevelText.textContent = `${Math.round(zoomLevel * 100)}%`;
+});
