@@ -152,3 +152,15 @@ zoomLevel = zoomLevel + 0.25;
   // Zet het zoomLevel om naar een percentage en toon dit in de overlay.
   zoomLevelText.textContent = `${Math.round(zoomLevel * 100)}%`;
 });
+
+zoomOut.addEventListener("click", () => {
+  zoomLevel -= 0.25;
+
+  if (zoomLevel < 1) {
+    zoomLevel = 1;
+  }
+
+  zoomImage.style.transform = `scale(${zoomLevel})`;
+  zoomLevelText.textContent = `${Math.round(zoomLevel * 100)}%`;
+});
+
