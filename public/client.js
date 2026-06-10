@@ -179,4 +179,12 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowLeft") {
     zoomPrev.click();
   }
+
+    if (event.key === "+" || event.key === "=") {
+    zoomIn.click();
+  }
+
+  if (event.key === "-" || event.key === "_") {
+    zoomOut.click();
+  }
 });
