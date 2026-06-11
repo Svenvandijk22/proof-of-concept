@@ -1,42 +1,6 @@
 {% render 'partials/head.liquid' %}
 
 
-<section class="product-gallery">
-  <div class="gallery-main">
-    
-    <button
-  class="gallery-zoom-button"
- 
->
-  <img
-    src="/assets/zoom_icon.png"
-    alt="zoom_icon_open"
-  >
-</button>
-
-    <img
-      class="gallery-main-image"
-      src="{{ images.first }}"
-      alt="{{ product.title }}"
-    >
-  </div>
-
-  <ul class="gallery-thumbnails">
-    {% for image in images %}
-      <li>
-        <a
-          class="gallery-thumbnail {% if forloop.first %}active{% endif %}"
-          href="{{ image }}"
-        >
-          <img
-            src="{{ image }}"
-            alt="{{ product.title }}"
-          >
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
 
 <div class="zoom-overlay">
   <div class="zoom-modal">
@@ -59,6 +23,117 @@
 
   <button class="zoom-cart-button">add to cart</button>
 </div>
+
+\<section class="product-layout">
+
+  <section class="product-gallery">
+    <div class="gallery-main">
+
+      <button class="gallery-zoom-button" aria-label="Open zoom gallery">
+        <img src="/assets/zoom_icon.png" alt="">
+      </button>
+
+      <img
+        class="gallery-main-image"
+        src="{{ images.first }}"
+        alt="{{ product.title }}"
+      >
+    </div>
+
+    <ul class="gallery-thumbnails">
+      {% for image in images %}
+        <li>
+          <a
+            class="gallery-thumbnail {% if forloop.first %}active{% endif %}"
+            href="{{ image }}"
+          >
+            <img src="{{ image }}" alt="{{ product.title }}">
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="product-details">
+    <p class="product-brand">{{ product.brand }}</p>
+    <h1 class="product-title">{{ product.title }} - White</h1>
+
+    <div class="product-rating">
+      <span>★★★★★</span>
+      <span>5</span>
+      <a href="#reviews">5 reviews</a>
+    </div>
+
+    <p class="product-summary">{{ product.summary }}</p>
+    <p class="product-id">ID {{ product.id }}</p>
+
+    <div class="product-colour">
+      <p>Colour <span>cotton white</span></p>
+
+      <div class="colour-options">
+        {% for image in images limit: 2 %}
+          <button class="colour-option {% if forloop.first %}active{% endif %}">
+            <img src="{{ image }}" alt="{{ product.title }}">
+          </button>
+        {% endfor %}
+      </div>
+    </div>
+
+    <form class="product-form" action="/cart/add" method="post">
+      <input type="hidden" name="product_id" value="{{ product.id }}">
+
+      <div class="size-header">
+        <label for="size">Size</label>
+        <a href="#">Size guide</a>
+      </div>
+
+      <select id="size" name="size">
+        <option value="" disabled selected hidden>Select</option>
+
+        {% for size in product.sizes %}
+          {% if size.available %}
+            <option value="EU {{ size.size }}">EU {{ size.size }}</option>
+          {% else %}
+            <option value="EU {{ size.size }}" disabled>
+              EU {{ size.size }} - Sold out
+            </option>
+          {% endif %}
+        {% endfor %}
+      </select>
+
+      <p class="product-price">€{{ product.price }}</p>
+      <p class="payment-text">Or €14.99/month with payment plans</p>
+      <a class="shipping-link" href="#">Shipping costs may apply</a>
+
+      <button type="submit" class="add-to-cart-button">
+        Add to basket
+      </button>
+    </form>
+
+    <p class="seller">
+      Sold and shipped by <strong>DECATHLON</strong>
+    </p>
+
+    <ul class="product-services">
+      <li>365 days to return for members <span>+</span></li>
+      <li>2-year warranty <span>+</span></li>
+    </ul>
+
+    <section class="delivery-options">
+      <h2>How to get it</h2>
+
+      <p><strong>Home delivery</strong> <a href="#">Enter postcode</a></p>
+      <p class="available">● Get it as soon as 2 working days</p>
+
+      <p><strong>Pick up at Decathlon</strong> <a href="#">Check Availability</a></p>
+
+      <p><strong>Pick up near you</strong></p>
+      <p class="available">● Get it as soon as 2 working days</p>
+    </section>
+  </section>
+
+</section>
+
 
 </body>
 
