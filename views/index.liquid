@@ -79,15 +79,15 @@
       </div>
     </div>
 
-    <form class="product-form" action="/cart/add" method="post">
-      <input type="hidden" name="product_id" value="{{ product.id }}">
+    <form class="product-form" >
+  
 
       <div class="size-header">
         <label for="size">Size</label>
         <a href="#">Size guide</a>
       </div>
 
-  <select id="size" name="size">
+     <select id="size" name="size">
         <option value="" disabled selected hidden>Select</option>
 
         {% for size in product.sizes %}

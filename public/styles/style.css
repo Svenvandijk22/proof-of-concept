@@ -409,6 +409,7 @@ body {
   }
 }
 
+
 .product-layout {
   display: flex;
   flex-direction: column;
@@ -570,6 +571,7 @@ body {
   }
 }
 
+
 @media (min-width: 900px) {
  .product-layout {
     display: grid;
@@ -597,6 +599,7 @@ body {
     padding-top: 0;
   }
 }
+
 
 
 
