@@ -573,7 +573,9 @@ body {
 
 
 @media (min-width: 900px) {
- .product-layout {
+ 
+ 
+  .product-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 28rem;
     gap: 3rem;
