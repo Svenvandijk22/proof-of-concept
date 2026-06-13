@@ -32,8 +32,8 @@ app.get("/", async function (request, response) {
   const data = await apiResponse.json();
 
   // Pak het eerste product uit de data-array.
-  const product = data.data[0];
-
+ 
+ const product = data.data[0];
 // Gebruik map() om door alle afbeeldingen te lopen
 // en van elke Directus file ID een bruikbare afbeelding-URL te maken.
   const images = product.images.map((image) => {
