@@ -211,7 +211,7 @@ body {
       transform: translateX(0);
     }
 
-    @media (min-width: 900px) {
+    @media (min-width: 1200px) {
       padding: 2rem 4.5rem 1.5rem;
 
       .nav-top {
@@ -367,7 +367,7 @@ body {
     }
   }
 
-  @media (min-width: 900px) {
+  @media (min-width: 1200px) {
     flex-direction: row;
     gap: 30px;
 
@@ -572,7 +572,7 @@ body {
 }
 
 
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
  
  
   .product-layout {
@@ -783,7 +783,7 @@ border: 1px solid #b8b8b8;
   }
 
 
-  @media (min-width: 900px) {
+  @media (min-width: 1200px) {
   .zoom-modal {
     width: min(90vw, 80rem);
     height: min(88vh, 56rem);
