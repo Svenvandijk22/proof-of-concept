@@ -67,6 +67,22 @@ app.post("/reviews", async function (request, response) {
     rating: 5,
     verified_buyer: false
   };
+
+  await fetch(
+    "https://fdnd-agency.directus.app/items/decathlon_reviews",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(reviewData)
+    }
+  );
+
+  response.redirect("/");
+});
+
+
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
 app.set("port", process.env.PORT || 8000);
