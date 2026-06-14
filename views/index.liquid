@@ -153,6 +153,14 @@
 
 </form>
 
+{% for review in reviews %}
+  <article class="review-card">
+    <h3>{{ review.title }}</h3>
+    <p>{{ review.description }}</p>
+    <p>{{ review.name }}</p>
+  </article>
+{% endfor %}
+
 
 </body>
 

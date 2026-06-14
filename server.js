@@ -40,6 +40,14 @@ app.get("/", async function (request, response) {
     return `https://fdnd-agency.directus.app/assets/${image.directus_files_id}`;
   });
 
+  const reviewResponse = await fetch(
+    "https://fdnd-agency.directus.app/items/decathlon_reviews"
+  );
+
+  const reviewData = await reviewResponse.json();
+  const reviews = reviewData.data;
+
+
   response.render("index.liquid", {
     product: product,
     images: images,
