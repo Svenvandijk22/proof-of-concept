@@ -863,4 +863,10 @@ border: 1px solid #b8b8b8;
 
     padding: 2rem 1.5rem;
   }
+
+  .footer-community {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
