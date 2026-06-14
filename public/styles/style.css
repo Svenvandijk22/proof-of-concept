@@ -853,4 +853,14 @@ border: 1px solid #b8b8b8;
       }
     }
   }
+
+  .footer-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #3643ba;
+    
+
+    padding: 2rem 1.5rem;
+  }
 }
