@@ -51,8 +51,22 @@ app.get("/", async function (request, response) {
   response.render("index.liquid", {
     product: product,
     images: images,
+    reviews: reviews,
   });
 });
+
+
+app.post("/reviews", async function (request, response) {
+
+  const reviewData = {
+    title: request.body["review-title"],
+
+    // tijdelijke testdata
+    description: "Test review",
+    name: "Sven",
+    rating: 5,
+    verified_buyer: false
+  };
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
 app.set("port", process.env.PORT || 8000);
