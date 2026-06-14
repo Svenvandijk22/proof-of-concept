@@ -883,4 +883,9 @@ border: 1px solid #b8b8b8;
     text-decoration: none;
     font-weight: 700;
   }
+
+  .footer-logo {
+    width: 2.5rem;
+    height: auto;
+  }
 }
