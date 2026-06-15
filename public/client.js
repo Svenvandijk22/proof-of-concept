@@ -188,8 +188,18 @@ document.addEventListener("keydown", (event) => {
     zoomOut.click();
   }
 });
+
+
+
+
+
 //de form, button, de overlay/ popup en afsluitbutton
 const reviewForm = document.querySelector(".review-form");
 const submitButton = document.querySelector(".review-submit-button");
 const successOverlay = document.querySelector(".review-success-overlay");
 const successClose = document.querySelector(".success-close");
+
+// submit event toevoegen aan de form
+reviewForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
