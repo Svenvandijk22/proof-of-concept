@@ -206,3 +206,5 @@ reviewForm.addEventListener("submit", async (event) => {
    submitButton.classList.add("loading");
   submitButton.disabled = true;
 
+  const formData = new FormData(reviewForm);
+
