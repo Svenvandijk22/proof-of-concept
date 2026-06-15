@@ -208,3 +208,10 @@ reviewForm.addEventListener("submit", async (event) => {
 
   const formData = new FormData(reviewForm);
 
+  await fetch("/reviews", {
+    method: "POST",
+    body: formData,
+    headers: {
+      Accept: "application/json",
+    },
+  });
