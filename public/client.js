@@ -219,3 +219,4 @@ reviewForm.addEventListener("submit", async (event) => {
   submitButton.classList.remove("loading");
   submitButton.disabled = false;
 
+  reviewForm.reset();
