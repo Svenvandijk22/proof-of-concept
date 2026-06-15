@@ -203,3 +203,6 @@ const successClose = document.querySelector(".success-close");
 reviewForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
+   submitButton.classList.add("loading");
+  submitButton.disabled = true;
+
