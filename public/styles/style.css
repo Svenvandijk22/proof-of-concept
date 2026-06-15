@@ -970,9 +970,7 @@ border: 1px solid #b8b8b8;
   gap: 1rem;
 
   max-width: 40rem;
-
   padding: 2rem;
-
 
   label {
     font-weight: 600;
@@ -981,47 +979,69 @@ border: 1px solid #b8b8b8;
 
   input {
     padding: 1rem;
-
     border: 1px solid #d9d9d9;
     border-radius: 0.5rem;
-
     font-size: 1rem;
   }
 
   button {
     width: fit-content;
-
     padding: 1rem 2rem;
-
     border: none;
     border-radius: 10px;
-
     background: #3643ba;
     color: white;
-
     font-weight: 700;
     cursor: pointer;
   }
-}
 
-.review-card {
+  .review-card {
   max-width: 40rem;
-
-
   padding: 1.5rem;
-
   border-bottom: 1px solid #d9d9d9;
-
-  h3 {
-    margin-bottom: 0.5rem;
-  }
-
-  p:nth-of-type(1) {
-    margin-bottom: 1rem;
-    color: #555;
-  }
-
-  p:nth-of-type(2) {
-    font-weight: 600;
-  }
 }
+}
+
+.button-loader {
+  display: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.review-submit-button.loading .button-text {
+  display: none;
+}
+
+.review-submit-button.loading .button-loader {
+  display: inline-block;
+}
+
+.review-success-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.review-success-overlay.active {
+  display: flex;
+}
+
+.review-success-popup {
+  position: relative;
+  width: min(90vw, 28rem);
+  padding: 2.5rem;
+  text-align: center;
+  background: white;
+  border-radius: 1rem;
+}
+

@@ -135,9 +135,8 @@
 </section>
 
 <form action="/reviews" method="post" class="review-form">
-
   <label for="review-title">
-    write a review
+    Write a review
   </label>
 
   <input
@@ -147,12 +146,13 @@
     required
   >
 
-  <button type="submit">
-     <span class="button-text">Send review</span>
+  <button type="submit" class="review-submit-button">
+    <span class="button-text">Send review</span>
     <span class="button-loader"></span>
   </button>
+</form>
 
-  <div class="review-success-overlay">
+<div class="review-success-overlay">
   <section class="review-success-popup">
     <button class="success-close" type="button">×</button>
 
@@ -168,10 +168,10 @@
     <button class="success-continue" type="button">
       Continue
     </button>
+  </section>
+</div>
 
-    </section>
 
-</form>
 
 {% for review in reviews %}
   <article class="review-card">
