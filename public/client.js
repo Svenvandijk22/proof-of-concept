@@ -223,3 +223,7 @@ reviewForm.addEventListener("submit", async (event) => {
 
   successOverlay.classList.add("active");
 });
+
+successClose.addEventListener("click", () => {
+  successOverlay.classList.remove("active");
+});
