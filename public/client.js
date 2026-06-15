@@ -215,3 +215,7 @@ reviewForm.addEventListener("submit", async (event) => {
       Accept: "application/json",
     },
   });
+
+  submitButton.classList.remove("loading");
+  submitButton.disabled = false;
+
