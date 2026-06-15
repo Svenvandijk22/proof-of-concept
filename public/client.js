@@ -220,3 +220,6 @@ reviewForm.addEventListener("submit", async (event) => {
   submitButton.disabled = false;
 
   reviewForm.reset();
+
+  successOverlay.classList.add("active");
+});
