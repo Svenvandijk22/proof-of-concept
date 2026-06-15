@@ -137,7 +137,7 @@
 <form action="/reviews" method="post" class="review-form">
 
   <label for="review-title">
-    Title
+    write a review
   </label>
 
   <input
@@ -151,6 +151,25 @@
      <span class="button-text">Send review</span>
     <span class="button-loader"></span>
   </button>
+
+  <div class="review-success-overlay">
+  <section class="review-success-popup">
+    <button class="success-close" type="button">×</button>
+
+    <div class="success-icon">✓</div>
+
+    <h2>Review submitted!</h2>
+
+    <p>
+      Thank you for sharing your experience.
+      Your review helps other customers make the right choice.
+    </p>
+
+    <button class="success-continue" type="button">
+      Continue
+    </button>
+
+    </section>
 
 </form>
 
