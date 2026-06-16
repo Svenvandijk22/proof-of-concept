@@ -46,17 +46,15 @@
         class="gallery-thumbnail {% if forloop.first %}active{% endif %}"
         href="{{ image }}"
       >
-    </div>
-
-    <ul class="gallery-thumbnails">
-      {% for image in images %}
-        <li>
-          <a class="gallery-thumbnail {% if forloop.first %}active{% endif %}" href="{{ image }}">
-            <img src="{{ image }}" alt="{{ product.title }}">
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
+        <img
+          src="{{ image }}?width=200"
+          alt="{{ product.title }}"
+          loading="lazy"
+        >
+      </a>
+    </li>
+  {% endfor %}
+</ul>
   </section>
 
   <section class="product-details">
