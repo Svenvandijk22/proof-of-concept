@@ -31,10 +31,20 @@
         <img src="/assets/zoom_icon.png" alt="">
       </button>
 
-      <img
+       <img
         class="gallery-main-image"
-        src="{{ images.first }}"
+        src="{{ images.first }}?width=1000"
         alt="{{ product.title }}"
+        fetchpriority="high">
+    
+     </div>
+
+   <ul class="gallery-thumbnails">
+  {% for image in images %}
+    <li>
+      <a
+        class="gallery-thumbnail {% if forloop.first %}active{% endif %}"
+        href="{{ image }}"
       >
     </div>
 
@@ -116,12 +126,12 @@
       <h2>How to get it</h2>
 
       <p><strong>Home delivery</strong> <a href="">Enter postcode</a></p>
-      <p class="available">● Get it as soon as 2 working days</p>
+      <p class="available"> Get it as soon as 2 working days</p>
 
       <p><strong>Pick up at Decathlon</strong> <a href="#">Check Availability</a></p>
 
       <p><strong>Pick up near you</strong></p>
-      <p class="available">● Get it as soon as 2 working days</p>
+      <p class="available"> Get it as soon as 2 working days</p>
     </section>
   </section>
 
