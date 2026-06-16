@@ -203,18 +203,23 @@ const successClose = document.querySelector(".success-close");
 reviewForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
+  // loading state toevoegen
+
    submitButton.classList.add("loading");
   submitButton.disabled = true;
 
+  // form data ophalen
   const formData = new FormData(reviewForm);
+const searchParams = new URLSearchParams(formData);
 
-  await fetch("/reviews", {
-    method: "POST",
-    body: formData,
-    headers: {
-      Accept: "application/json",
-    },
-  });
+await fetch("/reviews", {
+  method: "POST",
+  body: searchParams,
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded",
+    Accept: "application/json",
+  },
+});
 
   submitButton.classList.remove("loading");
   submitButton.disabled = false;
