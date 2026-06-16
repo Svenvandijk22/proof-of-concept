@@ -391,13 +391,15 @@ body {
 
     .gallery-thumbnails {
       order: 1;
-  
+          padding-right: 1rem;
+      box-sizing: border-box;
       flex-direction: column;
       gap: 1rem;
       max-height: 42rem;
       overflow-y: auto;
       overflow-x: hidden;
       z-index: 99;
+       width: 9rem;
 
         scrollbar-width: thin;
   scrollbar-color: transparent transparent;
