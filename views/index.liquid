@@ -25,37 +25,39 @@
 
 <section class="product-layout">
 
-  <section class="product-gallery">
-    <div class="gallery-main">
-      <button class="gallery-zoom-button" aria-label="Open zoom gallery">
-        <img src="/assets/zoom_icon.png" alt="">
-      </button>
+ <section class="product-gallery">
+  {% assign firstImage = product.images.first %}
 
-       <img
-        class="gallery-main-image"
-        src="{{ images.first }}?width=1000"
-        alt="{{ product.title }}"
-        fetchpriority="high">
-    
-     </div>
+  <div class="gallery-main">
+    <button class="gallery-zoom-button" type="button">
+      <img src="/assets/zoom_icon.png" alt="">
+    </button>
 
-   <ul class="gallery-thumbnails">
-  {% for image in images %}
-    <li>
-      <a
-        class="gallery-thumbnail {% if forloop.first %}active{% endif %}"
-        href="{{ image }}"
-      >
-        <img
-          src="{{ image }}?width=200"
-          alt="{{ product.title }}"
-          loading="lazy"
+    <img
+      class="gallery-main-image"
+      src="https://fdnd-agency.directus.app/assets/{{ firstImage.directus_files_id }}"
+      alt="{{ product.title }}"
+      fetchpriority="high"
+    >
+  </div>
+
+  <ul class="gallery-thumbnails">
+    {% for image in product.images %}
+      <li>
+        <a
+          class="gallery-thumbnail {% if forloop.first %}active{% endif %}"
+          href="https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}"
         >
-      </a>
-    </li>
-  {% endfor %}
-</ul>
-  </section>
+          <img
+            src="https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}"
+            alt="{{ product.title }}"
+            loading="lazy"
+          >
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
 
   <section class="product-details">
     <p class="product-brand">{{ product.brand }}</p>
