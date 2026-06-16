@@ -231,4 +231,5 @@ await fetch("/reviews", {
 
 successClose.addEventListener("click", () => {
   successOverlay.classList.remove("active");
+    window.location.reload();
 });
