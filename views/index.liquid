@@ -5,7 +5,6 @@
 <div class="zoom-overlay">
   <div class="zoom-modal">
     <button class="zoom-close" aria-label="Close zoom">✕</button>
-
     <button class="zoom-arrow zoom-arrow-left" aria-label="Previous image">‹</button>
 
     <div class="zoom-image-wrapper">
@@ -28,7 +27,6 @@
 
   <section class="product-gallery">
     <div class="gallery-main">
-
       <button class="gallery-zoom-button" aria-label="Open zoom gallery">
         <img src="/assets/zoom_icon.png" alt="">
       </button>
@@ -43,10 +41,7 @@
     <ul class="gallery-thumbnails">
       {% for image in images %}
         <li>
-          <a
-            class="gallery-thumbnail {% if forloop.first %}active{% endif %}"
-            href="{{ image }}"
-          >
+          <a class="gallery-thumbnail {% if forloop.first %}active{% endif %}" href="{{ image }}">
             <img src="{{ image }}" alt="{{ product.title }}">
           </a>
         </li>
@@ -79,15 +74,13 @@
       </div>
     </div>
 
-    <form class="product-form" >
-  
-
+    <form class="product-form">
       <div class="size-header">
         <label for="size">Size</label>
         <a href="">Size guide</a>
       </div>
 
-     <select id="size" name="size">
+      <select id="size" name="size">
         <option value="" disabled selected hidden>Select</option>
 
         {% for size in product.sizes %}
@@ -134,55 +127,67 @@
 
 </section>
 
-<form action="/reviews" method="post" class="review-form">
-  <label for="review-title">
-    Write a review
-  </label>
+<section class="reviews-section" id="reviews">
 
-  <input
-    type="text"
-    id="review-title"
-    name="review-title"
-    required
-  >
+  <form action="/reviews" method="post" class="review-form">
+    <label for="review-title">
+      Write a review
+    </label>
 
-  <button type="submit" class="review-submit-button">
-    <span class="button-text">Send review</span>
-    <span class="button-loader"></span>
-  </button>
-</form>
+    <input
+      type="text"
+      id="review-title"
+      name="review-title"
+      required
+    >
 
-<div class="review-success-overlay">
-  <section class="review-success-popup">
-    <button class="success-close" type="button">×</button>
+    <button type="submit" class="review-submit-button">
+      <span class="button-text">Send review</span>
+      <span class="button-loader"></span>
+    </button>
+  </form>
 
-  <div class="success-icon">
-  <img
-    src="/assets/succes icon.png"
-    alt="Review submitted successfully"
-  >
-</div>
+  <div class="review-success-overlay">
+    <section class="review-success-popup">
+      <button class="success-close" type="button">×</button>
 
-    <h2>Review submitted!</h2>
+      <div class="success-icon">
+        <img
+          src="/assets/succes icon.png"
+          alt="Review submitted successfully"
+        >
+      </div>
 
-    <p>
-      Thank you for sharing your experience.
-      Your review helps other customers make the right choice.
-    </p>
+      <h2>Review submitted!</h2>
 
+      <p>
+        Thank you for sharing your experience.
+        Your review helps other customers make the right choice.
+      </p>
+    </section>
+  </div>
 
-  </section>
-</div>
+  {% for review in reviews %}
+    <article class="review-card">
+      <h3>{{ review.title }}</h3>
+      <p>{{ review.description }}</p>
+      <p>{{ review.name }}</p>
 
+      <form action="/reviews/delete" method="post">
+        <input
+          type="hidden"
+          name="id"
+          value="{{ review.id }}"
+        >
 
+        <button type="submit">
+          Delete review
+        </button>
+      </form>
+    </article>
+  {% endfor %}
 
-{% for review in reviews %}
-  <article class="review-card">
-    <h3>{{ review.title }}</h3>
-    <p>{{ review.description }}</p>
-    <p>{{ review.name }}</p>
-  </article>
-{% endfor %}
+</section>
 
 
 </body>

@@ -57,31 +57,44 @@ app.get("/", async function (request, response) {
 
 
 app.post("/reviews", async function (request, response) {
-
   const reviewData = {
     title: request.body["review-title"],
-
-    // tijdelijke testdata
     description: "Test review",
     name: "Sven",
     rating: 5,
     verified_buyer: false
   };
 
+  await fetch("https://fdnd-agency.directus.app/items/decathlon_reviews", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(reviewData)
+  });
+
+  if (request.headers.accept.includes("application/json")) {
+    response.json({ success: true });
+  } else {
+    response.redirect("/");
+  }
+});
+
+
+
+app.post("/reviews/delete", async function (request, response) {
+
+  const reviewId = request.body.id;
+
   await fetch(
-    "https://fdnd-agency.directus.app/items/decathlon_reviews",
+    `https://fdnd-agency.directus.app/items/decathlon_reviews/${reviewId}`,
     {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(reviewData)
+      method: "DELETE"
     }
   );
 
   response.redirect("/");
 });
-
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
