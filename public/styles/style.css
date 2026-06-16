@@ -9,6 +9,7 @@
   src: url("/fonts/Decathlon-VF.19016feb.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
+    font-display: swap;
 }
 
 body {
