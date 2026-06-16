@@ -1,33 +1,34 @@
-// Stap 1: Pak alle thumbnails uit de HTML
+// Pak alle thumbnails
 const thumbnails = document.querySelectorAll(".gallery-thumbnail");
 
-// Stap 2: Pak de grote hoofdafbeelding uit de HTML
+// Pak de hoofdafbeelding
 const mainImage = document.querySelector(".gallery-main-image");
 
-// Stap 3: Loop door alle thumbnails heen
+// Loop door alle thumbnails
 thumbnails.forEach((thumbnail) => {
-  // Stap 4: Luister naar een klik op elke thumbnail
+
   thumbnail.addEventListener("click", (event) => {
-    // Stap 5: Voorkom dat de link de afbeelding opent
     event.preventDefault();
 
-    // Stap 6: Pak de img uit de aangeklikte thumbnail
+    // Pak de grote afbeelding uit de href
+    const largeImage = thumbnail.href;
+
+    // Zet de hoofdafbeelding naar de grote versie
+    mainImage.src = `${largeImage}?width=1600`;
+
+    // Alt tekst overnemen
     const thumbnailImage = thumbnail.querySelector("img");
-
-    // Stap 7: Vervang de hoofdafbeelding met de thumbnail-afbeelding
-    mainImage.src = thumbnailImage.src;
-
-    // Stap 8: Neem ook de alt-tekst over voor accessibility
     mainImage.alt = thumbnailImage.alt;
 
-    // Stap 9: Haal eerst de active class weg bij alle thumbnails
+    // Active class verwijderen
     thumbnails.forEach((item) => {
       item.classList.remove("active");
     });
 
-    // Stap 10: Zet de active class op de aangeklikte thumbnail
+    // Active class toevoegen
     thumbnail.classList.add("active");
   });
+
 });
 
 
@@ -67,7 +68,7 @@ const image = thumbnail.querySelector("img");
 // geeft een object terug met de src en alt van de afbeelding
 // Binnen de map callback maak ik met {} een object, Map verzamelt alle teruggegeven objecten en stopt ze in een nieuwe array 
   return {
-    src: image.src,
+    src: `${thumbnail.href}?width=1200`,
     alt: image.alt,
   };
 });
@@ -188,7 +189,6 @@ document.addEventListener("keydown", (event) => {
     zoomOut.click();
   }
 });
-
 
 
 

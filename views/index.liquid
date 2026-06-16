@@ -35,7 +35,7 @@
 
     <img
       class="gallery-main-image"
-      src="https://fdnd-agency.directus.app/assets/{{ firstImage.directus_files_id }}"
+      src="https://fdnd-agency.directus.app/assets/{{ firstImage.directus_files_id }}?width=1200"
       alt="{{ product.title }}"
       fetchpriority="high"
     >
@@ -49,7 +49,7 @@
           href="https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}"
         >
           <img
-            src="https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}"
+            src="https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?width=300"
             alt="{{ product.title }}"
             loading="lazy"
           >
