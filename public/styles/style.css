@@ -341,13 +341,24 @@ body {
     overflow-x: auto;
     overflow-y: hidden;
     list-style: none;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
   }
+  .gallery-thumbnails:hover {
+  scrollbar-color: #3643ba transparent;
+}
 
-  .gallery-thumbnails::-webkit-scrollbar {
-    display: none;
-  }
+.gallery-thumbnails::-webkit-scrollbar {
+  height: 6px;
+}
+
+.gallery-thumbnails::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.gallery-thumbnails:hover::-webkit-scrollbar-thumb {
+  background: #3643ba;
+}
 
   .gallery-thumbnail {
     display: grid;
@@ -387,7 +398,30 @@ body {
       overflow-y: auto;
       overflow-x: hidden;
       z-index: 99;
+
+        scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
     }
+
+
+.gallery-thumbnails:hover {
+  scrollbar-color: #3643ba transparent;
+}
+
+     .gallery-thumbnails::-webkit-scrollbar {
+    width: 6px;
+    height: auto;
+  }
+
+  .gallery-thumbnails::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 999px;
+  }
+
+  .gallery-thumbnails:hover::-webkit-scrollbar-thumb {
+    background: #3643ba;
+  }
+
 
     .gallery-main {
       order: 2;
