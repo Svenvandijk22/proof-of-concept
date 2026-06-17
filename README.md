@@ -5,7 +5,7 @@
 ## Inhoudsopgave
 
   * [discription](#discription)
-  * [Gebruik](#gebruik)
+  * [Usage](#Usage)
   * [Kenmerken](#kenmerken)
   * [Installatie](#installatie)
   * [Bronnen](#bronnen)
