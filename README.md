@@ -31,6 +31,10 @@ De pagina is opgebouwd met semantische HTML-elementen zoals `<header>`, `<nav>`,
 de html structuur van de site is opgebouwd uit sections behalve de popovers (zoom over en succses state).
 Voor de productgalerij is een lijst (`<ul>`) gebruikt voor de thumbnails. Elke thumbnail is een link (`<a>`), waardoor de galerij ook zonder JavaScript bruikbaar blijft.
 
+### css
+
+
+
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
