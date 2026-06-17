@@ -29,6 +29,7 @@ Browse through the product images using the thumbnails below the main image. Cli
 
 De pagina is opgebouwd met semantische HTML-elementen zoals `<header>`, `<nav>`, `<section>`, `<article>` en `<footer>`.
 de html structuur van de site is opgebouwd uit sections behalve de popovers (zoom over en succses state).
+Voor de productgalerij is een lijst (`<ul>`) gebruikt voor de thumbnails. Elke thumbnail is een link (`<a>`), waardoor de galerij ook zonder JavaScript bruikbaar blijft.
 
 
 ## Installatie
