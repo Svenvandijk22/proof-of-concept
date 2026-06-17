@@ -4,8 +4,8 @@
 
 ## Inhoudsopgave
 
-  * [discription](#discription)
-  * [Usage](#Usage)
+  * [discription](##discription)
+  * [Usage](##Usage)
   * [Kenmerken](#kenmerken)
   * [Installatie](#installatie)
   * [Bronnen](#bronnen)
@@ -24,7 +24,12 @@ Browse through the product images using the thumbnails below the main image. Cli
 
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
+
+### html
+
+De pagina is opgebouwd met semantische HTML-elementen zoals `<header>`, `<nav>`, `<section>`, `<article>` en `<footer>`.
+de html structuur van de site is opgebouwd uit sections behalve de popovers (zoom over en succses state).
+
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
