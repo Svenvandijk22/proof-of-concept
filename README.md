@@ -1,23 +1,21 @@
-Ontwerp en maak een data driven online concept voor een opdrachtgever
+# Decathlon
 
-De instructies voor deze opdracht staan in: [docs/INSTRUCTIONS.md](https://github.com/fdnd-task/proof-of-concept/blob/main/docs/INSTRUCTIONS.md)
 
-# Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
 
 ## Inhoudsopgave
 
-  * [Beschrijving](#beschrijving)
+  * [discription](#discription)
   * [Gebruik](#gebruik)
   * [Kenmerken](#kenmerken)
   * [Installatie](#installatie)
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
-## Beschrijving
-<!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+## discription
+This project focuses on improving the Product Detail Page (PDP) for Decathlon Travel. The goal was to create a more user-friendly and mobile-friendly experience for the product gallery and adding interactive features.
+
+The assignment included creating a responsive image gallery with thumbnails, a zoom feature and performance optimizations. Extra attention was given to accessibility, usability, and loading performance to improve the overall user experience.
+
 
 ## Gebruik
 <!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
