@@ -19,7 +19,11 @@ The assignment included creating a responsive image gallery with thumbnails, a z
 
 
 ## Gebruik
-<!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
+
+## Usage
+
+Browse through the product images using the thumbnails below the main image. Click on a thumbnail to change the active image. Open the zoom view for a closer look and use the navigation controls to switch between product photos.
+
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
