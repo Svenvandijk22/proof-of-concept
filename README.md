@@ -12,6 +12,7 @@
   * [Licentie](#licentie)
 
 ## discription
+
 This project focuses on improving the Product Detail Page (PDP) for Decathlon Travel. The goal was to create a more user-friendly and mobile-friendly experience for the product gallery and adding interactive features.
 
 The assignment included creating a responsive image gallery with thumbnails, a zoom feature and performance optimizations. Extra attention was given to accessibility, usability, and loading performance to improve the overall user experience.
