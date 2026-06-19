@@ -2,12 +2,12 @@
 
 
 
-## Inhoudsopgave
+## Table of Contents
 
   * [discription](##discription)
   * [Usage](##Usage)
-  * [Kenmerken](#kenmerken)
-  * [Installatie](#installatie)
+  * [Features](#features)
+  * [Installation](#installation)
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
