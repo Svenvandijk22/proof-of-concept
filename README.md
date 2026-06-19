@@ -23,6 +23,12 @@ The assignment included creating a responsive image gallery with thumbnails, a z
 Browse through the product images using the thumbnails below the main image. Click on a thumbnail to change the active image. Open the zoom view for a closer look and use the navigation controls to switch between product photos.
 
 
+
+https://github.com/user-attachments/assets/78a1a977-24d0-409c-bec7-4a9e042e4893
+
+
+
+
 ## Kenmerken
 
 ### html
