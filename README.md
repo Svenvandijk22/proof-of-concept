@@ -147,6 +147,15 @@ To improve performance, the custom font uses `font-display: swap`.
 
 This ensures that text remains visible while the custom font is loading, improving the perceived loading speed of the page.
 
+### java script
+
+For the gallery, I used JavaScript to allow users to select different thumbnails. When a thumbnail is clicked, the main product image updates to display the selected image. This makes the gallery more interactive and user-friendly.
+
+For the zoom overlay, I first created several `let` variables at the top of the script. I did this because these elements are used multiple times throughout the code, such as the main image, the zoom container, and the thumbnails. By storing them once, the code stays cleaner and I avoid repeatedly using `document.querySelector`.
+
+I then created several functions. One function is responsible for changing the active image, another opens the zoom overlay, and another closes it. These functions are reused throughout the script and are triggered by different events such as `click`, `mouseover`, and `keydown`.
+
+I also used `map` instead of `forEach`. With `map`, I can create a new array containing the data I need from the thumbnails, such as the image source and alt text. This makes it easier to connect the gallery functionality with the zoom feature.
 
 
 ## Installatie
