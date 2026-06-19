@@ -33,9 +33,12 @@ https://github.com/user-attachments/assets/78a1a977-24d0-409c-bec7-4a9e042e4893
 
 ### html
 
-De pagina is opgebouwd met semantische HTML-elementen zoals `<header>`, `<nav>`, `<section>`, `<article>` en `<footer>`.
-de html structuur van de site is opgebouwd uit sections behalve de popovers (zoom over en succses state).
-Voor de productgalerij is een lijst (`<ul>`) gebruikt voor de thumbnails. Elke thumbnail is een link (`<a>`), waardoor de galerij ook zonder JavaScript bruikbaar blijft.
+The page is built using semantic HTML elements such as `<header>`, `<nav>`, `<section>`, `<article>`, and `<footer>`.
+
+The HTML structure of the website is mainly composed of sections, with the exception of the popovers (zoom overlay and success state).
+
+For the product gallery, an unordered list (`<ul>`) is used to display the thumbnails. Each thumbnail is wrapped in a link (`<a>`), which ensures that the gallery remains functional even when JavaScript is disabled.
+
 
 ### css
 
