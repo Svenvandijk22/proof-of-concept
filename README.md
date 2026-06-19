@@ -157,9 +157,16 @@ I then created several functions. One function is responsible for changing the a
 
 I also used `map` instead of `forEach`. With `map`, I can create a new array containing the data I need from the thumbnails, such as the image source and alt text. This makes it easier to connect the gallery functionality with the zoom feature.
 
+## Installation
+- Clone the repository
+- Open the folder in VS Code
+- Open the terminal and type in these commands:
 
-## Installatie
-<!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+`npm install`
+<br>
+`npm start`
+- Go to `localhost:8000` to see it live
+
 
 ## Bronnen
 
