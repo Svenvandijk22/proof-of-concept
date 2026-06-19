@@ -33,8 +33,6 @@ Voor de productgalerij is een lijst (`<ul>`) gebruikt voor de thumbnails. Elke t
 
 ### css
 
-## CSS
-
 The website is built using a mobile-first approach. The base layout is designed for smaller screens first and is enhanced for larger screens using media queries.
 
 ```css
