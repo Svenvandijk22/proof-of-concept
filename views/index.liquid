@@ -4,19 +4,19 @@
 
 <div class="zoom-overlay">
   <div class="zoom-modal">
-    <button class="zoom-close" aria-label="Close zoom">✕</button>
-    <button class="zoom-arrow zoom-arrow-left" aria-label="Previous image">‹</button>
+    <button class="zoom-close">✕</button>
+    <button class="zoom-arrow zoom-arrow-left">‹</button>
 
     <div class="zoom-image-wrapper">
       <img class="zoom-image" src="" alt="">
     </div>
 
-    <button class="zoom-arrow zoom-arrow-right" aria-label="Next image">›</button>
+    <button class="zoom-arrow zoom-arrow-right">›</button>
 
     <div class="zoom-controls">
-      <button class="zoom-out" aria-label="Zoom out">−</button>
+      <button class="zoom-out" >−</button>
       <span class="zoom-level">100%</span>
-      <button class="zoom-in" aria-label="Zoom in">+</button>
+      <button class="zoom-in" >+</button>
     </div>
   </div>
 
@@ -26,33 +26,44 @@
 <section class="product-layout">
 
  <section class="product-gallery">
-  {% assign firstImage = product.images.first %}
+  {% assign firstImage = product.images.first reversed  %}
 
   <div class="gallery-main">
     <button class="gallery-zoom-button" type="button">
       <img src="/assets/zoom_icon.png" alt="">
     </button>
 
-    <img
-      class="gallery-main-image"
-      src="https://fdnd-agency.directus.app/assets/{{ firstImage.directus_files_id }}?width=1200"
-      alt="{{ product.title }}"
-      fetchpriority="high"
-    >
+<img
+  class="gallery-main-image"
+  src="https://fdnd-agency.directus.app/assets/{{ firstImage.directus_files_id }}?width=800"
+  srcset="
+    https://fdnd-agency.directus.app/assets/{{ firstImage.directus_files_id }}?width=600 600w,
+    https://fdnd-agency.directus.app/assets/{{ firstImage.directus_files_id }}?width=900 900w,
+    https://fdnd-agency.directus.app/assets/{{ firstImage.directus_files_id }}?width=1200 1200w
+  "
+  sizes="(min-width: 900px) 60vw, 100vw"
+  alt="{{ product.title }}"
+  fetchpriority="high"
+>
   </div>
 
   <ul class="gallery-thumbnails">
-    {% for image in product.images %}
+    {% for image in product.images reversed %}
       <li>
         <a
           class="gallery-thumbnail {% if forloop.first %}active{% endif %}"
           href="https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}"
         >
-          <img
-            src="https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?width=300"
-            alt="{{ product.title }}"
-            loading="lazy"
-          >
+     <img
+  src="https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?width=150"
+  srcset="
+    https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?width=150 150w,
+    https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?width=300 300w
+  "
+  sizes="80px"
+  alt="{{ product.title }}"
+  loading="lazy"
+>
         </a>
       </li>
     {% endfor %}
@@ -143,7 +154,7 @@
     <label for="review-title">
       Write a review
     </label>
-
+   <p>Share your experience and help other customers make the right choice</p>
     <input
       type="text"
       id="review-title"
@@ -177,7 +188,7 @@
     </section>
   </div>
 
-  {% for review in reviews %}
+  {% for review in reviews reversed %}
     <article class="review-card">
       <h3>{{ review.title }}</h3>
       <p>{{ review.description }}</p>

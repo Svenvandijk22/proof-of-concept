@@ -1,33 +1,67 @@
-// Pak alle thumbnails
+// Selecteer alle thumbnail links uit de galerij.
+// querySelectorAll geeft een NodeList terug met alle elementen
+// die de class .gallery-thumbnail hebben.
 const thumbnails = document.querySelectorAll(".gallery-thumbnail");
 
-// Pak de hoofdafbeelding
+// Selecteer de hoofdafbeelding van de galerij.
+// Deze afbeelding wordt aangepast wanneer een gebruiker
+// op een thumbnail klikt.
 const mainImage = document.querySelector(".gallery-main-image");
 
-// Loop door alle thumbnails
+// Loop door alle thumbnails heen.
+// Voor iedere thumbnail voeg ik een click event listener toe.
 thumbnails.forEach((thumbnail) => {
 
-  thumbnail.addEventListener("click", (event) => {
-    event.preventDefault();
+thumbnail.addEventListener("click", (event) => {
 
-    // Pak de grote afbeelding uit de href
-    const largeImage = thumbnail.href;
 
-    // Zet de hoofdafbeelding naar de grote versie
-    mainImage.src = `${largeImage}?width=1600`;
+// Voorkom dat de browser de link opent.
+// Normaal gesproken zou de href worden gevolgd,
+// maar ik wil de afbeelding client-side wisselen.
 
-    // Alt tekst overnemen
-    const thumbnailImage = thumbnail.querySelector("img");
-    mainImage.alt = thumbnailImage.alt;
 
-    // Active class verwijderen
-    thumbnails.forEach((item) => {
-      item.classList.remove("active");
-    });
+// Haal de URL van de aangeklikte thumbnail op.
+// Deze URL gebruik ik later voor de hoofdafbeelding.
+const largeImage = thumbnail.href;
 
-    // Active class toevoegen
-    thumbnail.classList.add("active");
-  });
+// Vervang de standaard afbeelding.
+// Dit is de fallback afbeelding voor browsers
+// die geen srcset ondersteunen.
+mainImage.src = `${largeImage}?width=800`;
+
+// Stel meerdere afbeeldingsgroottes beschikbaar.
+// De browser kiest automatisch de meest geschikte versie
+// op basis van schermgrootte en resolutie.
+// Hierdoor worden onnodig grote afbeeldingen voorkomen
+// en verbetert de performance.
+mainImage.srcset = `
+  ${largeImage}?width=600 600w,
+  ${largeImage}?width=900 900w,
+  ${largeImage}?width=1200 1200w
+`;
+
+// Zoek de afbeelding binnen de thumbnail.
+// Ik gebruik deze om de alt-tekst over te nemen.
+const thumbnailImage = thumbnail.querySelector("img");
+
+// Neem de alt-tekst van de thumbnail over.
+// Zo blijft de hoofdafbeelding toegankelijk voor
+// screenreaders en andere hulpmiddelen.
+mainImage.alt = thumbnailImage.alt;
+
+// Verwijder eerst de active class van alle thumbnails.
+// Hierdoor is er altijd maar één actieve thumbnail zichtbaar.
+thumbnails.forEach((item) => {
+  item.classList.remove("active");
+});
+
+// Voeg de active class toe aan de thumbnail
+// waarop de gebruiker heeft geklikt.
+// Dit geeft visuele feedback welke afbeelding actief is.
+thumbnail.classList.add("active");
+
+
+});
 
 });
 
@@ -54,6 +88,7 @@ const galleryZoomButton = document.querySelector(".gallery-zoom-button");
 let currentImageIndex = 0;
 
 // Houdt het huidige zoomniveau bij
+// 1 betekent 100% normale grootte
 let zoomLevel = 1;
 
 
@@ -75,15 +110,21 @@ const image = thumbnail.querySelector("img");
 
 
 
+// Deze functie updateZoomImage() zorgt ervoor dat de juiste afbeelding in de zoom-overlay wordt getoond. 
+// Daarnaast wordt de zoom teruggezet naar 100%
+
 function updateZoomImage() {
   // Toon de afbeelding van de actieve index.
+  // current image index pakt het eerste object uit de array
+  // De variabele galleryImages is een array met informatie van alle gallery thumbnails
+
   zoomImage.src = galleryImages[currentImageIndex].src;
   zoomImage.alt = galleryImages[currentImageIndex].alt;
 
   // Hier verander ik de waarde van de variabele 
   zoomLevel = 1;
   zoomImage.style.transform = `scale(${zoomLevel})`;
-  // // Werk de zoom percentage tekst bij.
+  // Werk de zoom percentage tekst bij.
   zoomLevelText.textContent = "100%";
 }
 
