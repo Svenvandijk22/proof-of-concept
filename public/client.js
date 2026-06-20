@@ -14,7 +14,7 @@ thumbnails.forEach((thumbnail) => {
 
 thumbnail.addEventListener("click", (event) => {
 
-
+  event.preventDefault();
 // Voorkom dat de browser de link opent.
 // Normaal gesproken zou de href worden gevolgd,
 // maar ik wil de afbeelding client-side wisselen.
