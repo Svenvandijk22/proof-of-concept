@@ -30,18 +30,24 @@
 
   <div class="gallery-main">
 <button class="gallery-zoom-button" type="button" aria-label="Open image zoom">
-  <img src="/assets/zoom_icon.png" alt="">
+   <img
+    src="/assets/zoom_icon.png"
+    width="40"
+    height="40"
+    alt=""
+  >
 </button>
-
 <img
   class="gallery-main-image"
   src="https://fdnd-agency.directus.app/assets/{{ firstImage.directus_files_id }}?width=800"
   srcset="
-    https://fdnd-agency.directus.app/assets/{{ firstImage.directus_files_id }}?width=600 600w,
-    https://fdnd-agency.directus.app/assets/{{ firstImage.directus_files_id }}?width=900 900w,
-    https://fdnd-agency.directus.app/assets/{{ firstImage.directus_files_id }}?width=1200 1200w
+    https://fdnd-agency.directus.app/assets/{{ firstImage.directus_files_id }}?width=500 500w,
+    https://fdnd-agency.directus.app/assets/{{ firstImage.directus_files_id }}?width=700 700w,
+    https://fdnd-agency.directus.app/assets/{{ firstImage.directus_files_id }}?width=900 900w
   "
-  sizes="(min-width: 900px) 60vw, 100vw"
+  sizes="(min-width: 1200px) 900px, 90vw"
+  width="900"
+  height="1350"
   alt="{{ product.title }}"
   fetchpriority="high"
 >
@@ -54,13 +60,15 @@
           class="gallery-thumbnail {% if forloop.first %}active{% endif %}"
           href="https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}"
         >
-     <img
-  src="https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?width=150"
+  <img
+  src="https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?width=80"
   srcset="
-    https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?width=150 150w,
-    https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?width=300 300w
+    https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?width=80 80w,
+    https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?width=160 160w
   "
   sizes="80px"
+  width="80"
+  height="80"
   alt="{{ product.title }}"
   loading="lazy"
 >
@@ -87,11 +95,20 @@
       <p>Colour <span>cotton white</span></p>
 
       <div class="colour-options">
-        {% for image in images limit: 2 %}
-          <button class="colour-option {% if forloop.first %}active{% endif %}">
-            <img src="{{ image }}" alt="{{ product.title }}">
-          </button>
-        {% endfor %}
+      {% for image in product.images limit: 2 %}
+  <button class="colour-option {% if forloop.first %}active{% endif %}" type="button">
+    <img
+      src="https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?width=80"
+      srcset="
+        https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?width=80 80w,
+        https://fdnd-agency.directus.app/assets/{{ image.directus_files_id }}?width=160 160w
+      "
+      sizes="80px"
+      alt="{{ product.title }}"
+      loading="lazy"
+    >
+  </button>
+{% endfor %}
       </div>
     </div>
 
